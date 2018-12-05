@@ -1,3 +1,36 @@
+
+- [x] What are the benefits of a Javascript closure?
+
+`Closure` allows a function to access variables from an enclosing scope — **environment** — even after it leaves the scope in which it was declared.
+
+One of the main benefits of closures is that it allows **data encapsulation**. 
+
+- [x] Formally define a Javascript closure
+
+A closure is the combination of a function and the lexical environment from which it was declared.
+
+- [x] Give an example of a closure
+- [x] What is **data encapsulation**?
+
+Some data should not be directly exposed.
+
+- [x] What is the difference between the memory heap and call stack in javascript?
+- [x] What is one problem with programming languages that are fully single-threaded
+
+- [x] Is Javascript a single-threaded language? Explain (Hint: This may not be a yes or no question)
+
+- [x] When is using an IIFE necessary? 
+
+An IIFE(Immediate Invoked Function Expression) is a function expression that is called immediately after you define it. It is usually used when you want to create a new variable scope.
+
+- [x] What is the syntax for an IIFE?
+
+The **(surrounding parenthesis)** prevents from treating it as a function declaration.
+
+The **final parenthesis()** are executing the function expression.
+
+
+
 - In which phase does hoisting occur?
 
 The behavior of "moving" `var` and `function` declarations to the top of the their recpective scopes during the implementation phase is called **hoisting**.

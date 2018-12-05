@@ -23,4 +23,19 @@ Inside any Redux application, there is one particular function that takes the st
 
 
 - What is the role of the store in Redux?
+
+This store binds together the three principles of Redux. It holds the current application's state object. It lets you dispatch actions. When you create it, you need to specify the reducer that tells how state is updated with actions.
+
+
 - What does the `subscribe` method do in Redux?
+
+It lets you register a callback that the Redux store will call any time an action has been dispatched, so that you can update the UI of your application. It will reflect the current application state.
+
+
+- What is the difference between `event.target` and `event.currentTarget`?
+- What does `stopImmediatePropagation` do?
+- What is event delegation?
+- What are presentational components?
+- What's the difference between the `DOMContentLoaded` and `load` event triggers?
+- Explain `Context` in React 
+- What does the `<Provider>` component do?
