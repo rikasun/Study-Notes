@@ -15,9 +15,25 @@ A closure is the combination of a function and the lexical environment from whic
 Some data should not be directly exposed.
 
 - [x] What is the difference between the memory heap and call stack in javascript?
+
+Objects are allocated in a heap which is just a name to denote a large mostly unstructured region of memory. Memory heap is where memory allocation happens.
+
+Function calls form a stack of frames. Call Stack is a data structure which record where in the programme we are. If we step into a function, it will be put into the call stack. If we return a function, we pop off the top of the stack.
+
+Queue: 
+
 - [x] What is one problem with programming languages that are fully single-threaded
 
+A downside of this model is that if a message takes too long to complete, the web application is unable to process user interactions like click or scroll. 
+
+Don't block the event loop means don't put useless slow code on the stack
+
+
 - [x] Is Javascript a single-threaded language? Explain (Hint: This may not be a yes or no question)
+
+Yes because single thread language, single callback, do one thing at a time.
+The runtime can only do one thing at a time. 
+No but The brownser of not only just the runtime so we can do things concurrently. We can put WebAPI callbacks in the event queue process it until the stack is empty.
 
 - [x] When is using an IIFE necessary? 
 
@@ -55,3 +71,19 @@ let and const are not hoisted.
 - What type of function is invoked with the `new` keyword? What does this function return?
 
 Functions invoked using the new keyword are called **constructor functions**.
+
+- How can you stop event bubbling?
+
+- What is event delegation?
+
+- Discuss 4 differences between ES5 and ES6 that you find important
+
+- What are the steps of a `try..catch` block in Javascript?
+- What type of errors to `try..catch` blocks work for?
+- When creating a custom error, what attributes should it have?
+- What is a Priority Queue?
+- Discuss the differences between `let`, `const`, and `var`. What are their respective scopings?
+- What happens when you enable strict mode in javascript?
+- How does the rest/spread operator work in JS?
+- What problem does `bind` solve in Javascript? How does it accomplish this?
+- What is the syntax for passing arguments to the `bind` function?
