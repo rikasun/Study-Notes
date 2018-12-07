@@ -105,6 +105,15 @@ To stop the bubbling and prevent handlers on the current element from running, t
 
 - What is event delegation?
 
+It’s often used to add same handling for many similar elements, but not only for that.
+
+The algorithm:
+
+1. Put a single handler on the container.
+2. In the handler – check the source element event.target.
+3. If the event happened inside an element that interests us, then handle the event.
+
+
 - Discuss 4 differences between ES5 and ES6 that you find important
 
 - What are the steps of a `try..catch` block in Javascript?
