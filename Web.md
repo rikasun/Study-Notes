@@ -21,3 +21,23 @@ DELETE
 
 Removes all current representations of the target resource given by a URI.
 
+- [x] Why do we need a DNS?
+ 
+ Domain name system is the architecture for how to pair a domain name and an IP address.
+
+- [x] Explain TCP, and why it is a necessary protocol
+
+Transmission control protocal: TCP provides reliable, ordered, and error-checked delivery of a stream of octets (bytes) between applications running on hosts communicating via an IP network. Major internet applications such as the World Wide Web, email, remote administration, and file transfer rely on TCP.
+
+Application Layer
+Transport Layer
+
+- What is a CSRF Attack?
+- How can you prevent CSRF Vulnerabilities?
+
+- What is Round Robin DNS binding?
+- What issue arises regarding sessions when implementing a Load Balancer?
+- What is striping when talking about writing to a Hard drive?
+- What is RAID and what functionality can it give you?
+- What is a symbol when talking about transmitting data?
+- How is information transmitted over wireless signal?
