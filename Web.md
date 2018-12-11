@@ -32,6 +32,7 @@ Transmission control protocal: TCP provides reliable, ordered, and error-checked
 Application Layer
 Transport Layer
 
+- What is the danger of an XSS
 - What is a CSRF Attack?
 - How can you prevent CSRF Vulnerabilities?
 

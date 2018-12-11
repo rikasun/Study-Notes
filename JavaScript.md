@@ -46,13 +46,11 @@ The **(surrounding parenthesis)** prevents from treating it as a function declar
 The **final parenthesis()** are executing the function expression.
 
 
-
 - In which phase does hoisting occur?
 
 The behavior of "moving" `var` and `function` declarations to the top of the their recpective scopes during the implementation phase is called **hoisting**.
 
 Function declarations are completely hoisted. This means that a declared function can be called before it is defined.
-
 
 Variables are partially hoisted. var declarations are hoisted but not its assignments.
 
@@ -66,7 +64,6 @@ let and const are not hoisted.
 2. Sets the object’s prototype to be the prototype of the constructor function.
 3. Executes the constructor function with this as the newly created object.
 4. Returns the created object. If the constructor returns an object, this object is returned.
-
 
 - What type of function is invoked with the `new` keyword? What does this function return?
 
@@ -116,6 +113,18 @@ The algorithm:
 
 - Discuss 4 differences between ES5 and ES6 that you find important
 
+1. Block Scope 
+- Prevent Variable Hoisting Outside of Scope(var is hoisted, so reassign in the scope will not change the value in the scope)
+- Prevent Duplicate Variable Declaration(you cannot use let to declare the same variable twice)
+- Eliminates The Need For IIFE
+
+2. Lexical “this” (via Arrow Functions)
+Lexical “this” a feature that forces the variable “this” to always point to the object where it is physically located within.
+3. Dealing With “arguments”
+In ES6, we can use a new feature called “Rest” parameters. It’s represented with 3 dots and a name like …args. Rest parameters is an Array and so we can use all the Array functions.
+4. Classes
+5. Strict Mode
+
 - What are the steps of a `try..catch` block in Javascript?
 - What type of errors to `try..catch` blocks work for?
 - When creating a custom error, what attributes should it have?
@@ -126,3 +135,6 @@ The algorithm:
 - What problem does `bind` solve in Javascript? How does it accomplish this?
 - What is the syntax for passing arguments to the `bind` function?
 - Does JS assign variables by value or by reference?
+- What are the 7 different JS types? 
+- Explain the difference between + and -*/ in JS when it comes to coercion.
+- How does prototypal inheritance work?
