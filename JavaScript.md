@@ -126,9 +126,30 @@ In ES6, we can use a new feature called “Rest” parameters. It’s represente
 5. Strict Mode
 
 - What are the steps of a `try..catch` block in Javascript?
+
+```javascript
+try {
+  // code...
+} catch (err) {
+  // error handling
+}
+```
+
 - What type of errors to `try..catch` blocks work for?
+
+try..catch only works for runtime errors. For try..catch to work, the code must be runnable. In other words, it should be valid JavaScript.
+try..catch works synchronously. If an exception happens in “scheduled” code, like in setTimeout, then try..catch won’t catch it:
+
 - When creating a custom error, what attributes should it have?
-- What is a Priority Queue?
+
+We can inherit from Error and other built-in error classes normally, just need to take care of name property and don’t forget to call super.
+
+- What's the difference between the `DOMContentLoaded` and `load` event triggers?
+
+`DOMContentLoaded` – the browser fully loaded HTML, and the DOM tree is built, but external resources like pictures <img> and stylesheets may be not yet loaded.
+
+`load` – the browser loaded all resources (images, styles etc).
+
 - Discuss the differences between `let`, `const`, and `var`. What are their respective scopings?
 - What happens when you enable strict mode in javascript?
 - How does the rest/spread operator work in JS?
