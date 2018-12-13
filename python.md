@@ -67,6 +67,31 @@ print('The result was {r:1.3f}'.format(r=result)) => 'The result was 0.129'
 name = 'Jose'
 print('My name is {}'.format(name))
 print(f'My name is {name}')
+
+print('{0:8} | {1:9}'.format('Fruit', 'Quantity'))
+print('{0:8} | {1:9}'.format('Apples', 3.))
+print('{0:8} | {1:9}'.format('Oranges', 10))
+# Fruit    | Quantity 
+# Apples   |       3.0
+# Oranges  |        10
+```
+
+### lists
+elements in lists is mutable
+```python
+new_list = ['one','two']
+new_list.append('three')
+new_list => ['one', 'two', 'three']
+# append permenantly changed the list
+new_list.pop() => 'three
+new_list.pop(0) => ['two']
+sorted_list = new_list.sort()
+type(sorted_list) => NoneType
+# it doesnt return anything, it is a in-place
+# so instead you can do
+new_list.sort()
+sorted_list = new_list
+new_list.reverse()
 ```
 
 
