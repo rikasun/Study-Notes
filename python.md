@@ -53,7 +53,7 @@ letter * 10 => 'zzzzzzzzzz'
 s.upper()
 s.lower()
 s.split()
-s.split('W)
+s.split('W‘)
 
 'Insert another string with curly {}'.format('The inserted string) => 'Insert another string with curly The inserted string'
 'string here {} also {}'.format('something1', 'something2')
@@ -85,6 +85,7 @@ new_list => ['one', 'two', 'three']
 # append permenantly changed the list
 new_list.pop() => 'three
 new_list.pop(0) => ['two']
+sorted(new_list) #not in-place but will return the sorted version
 sorted_list = new_list.sort()
 type(sorted_list) => NoneType
 # it doesnt return anything, it is a in-place
@@ -93,5 +94,71 @@ new_list.sort()
 sorted_list = new_list
 new_list.reverse()
 ```
+### Dictionary
+```python
+d = {'key1':1, 'key2':2, 'key3':3 }
+d.keys() => dict_keys(['key1', 'key2', 'key3'])
+d.values() => dict_values([1, 2, 3])
+d.items() => dict_items([('key1', 1), ('key2', 2), ('key2', 3)])
+# method to return tuples of all items
+```
+
+### Tuples
+Similar to lists but has **immutability** and keeps data integrity.
+```python
+t = (1,2,3)
+type(t) => tuple
+t.count(1)
+t.index(1)
+t[0] = "new" => TypeError
+```
+
+### Sets
+Unordered collection of ***unique*** elements.
+```python
+myset = set()
+myset.add(1) => {1}
+mylist =  [1,1,1,1,2,2,3,3,3,3]
+set(mylist) => {1,2,3}
+
+```
+
+### Booleans
+returns True or False. In python you need to capitalize T and F.
+```python
+type(False) => Bool
+3 == 3.0 => True
+```
+
+### Files I/O
+```python
+%%writefile myfile.txt
+# write myfile.txt
+myfile = open('myfile.txt')
+myfile = open('nosuchfile.txt') => FileNotFoundError
+pwd => check the location
+myfile.read() => returns a giant string of everything in the file
+# \n indicate a new ine
+myfile.read() => ''
+# because the cursor is at the end of the file now
+myfile.seek(0)
+# move the cursor to the beginning of the file
+myfile.read() => returns all again
+myfile.readlines() => returns each lines in a list
+# so you can loop through them
+myfile = open("/Users/....)
+myfile.close()
+with open('myfile.txt') as my_new_file:
+    contents = my_new_file.read()
+contents =>
+# shift+Tab next to the function gets all the function
+with open('myfile.txt', mode="r") as my_file:
+    contents = my_file.read()
+mode = 'r' #read only
+mode = 'w' #overwrite or create new
+mode = 'a' #append only, will add on files
+mode = 'r+' #both read and write
+mode = 'w+'
+``` 
 
 
