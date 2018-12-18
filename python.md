@@ -161,4 +161,108 @@ mode = 'r+' #both read and write
 mode = 'w+'
 ``` 
 
+### logical comparisons
+- and
+- or
+- not
+
+```python
+ not 1 == 1
+```
+
+### controll flow
+colon and indentation
+
+#### if, else statement
+```python
+if condition1:
+    # code
+elif condition2:
+    # code
+else: 
+    # code
+```
+
+#### for loop
+Tuple unpacking
+```python
+mylist = [(1,2), (3,4),(5,6)]
+for a, b in mylist:
+    print(a)
+
+d = {'k1':1, 'K2':2, 'K3':3}
+for key, value in d.items():
+    print(value)
+```
+
+#### while loop
+```python
+while some_boolean_condition:
+  # do something
+else:
+  # do something else
+```
+`break` breaks out of the current closest enclosing loop
+`continue` goes to the top of the closest enclosing loop
+`pass` does nothing at all, sometimes used as a placeholder to avoid the syntax error
+
+#### some common operators
+`range`
+```python
+range(0, 11) # this is a generator function
+list(range(0,11)) => [0,1,2,3,...,10]
+list(range(0, 101, 10)) # 10 is the step size
+```
+`enumerate`
+```python
+for i, letter in enumerate('abcde'):
+    print(i)
+    print(letter)
+```
+`zip`
+```python
+mylist1 = [1,2,3,4,5]
+mylist2 = ['a', 'b', 'c', 'd', 'e']
+list(zip(mylist1, mylist2))
+```
+`in operator`
+```python
+'x' in ['x', 'y', 'z'] => True
+'mykey' in {'mykey': 345} => True
+```
+
+`min max`
+```python
+min(mylist)
+max(mylist)
+```
+
+`random`
+```python
+from random import shuffle
+mylist = [1, 2, 4 ,5 10]
+shuffle(mylist) => not return anything # a in-place action
+mylist
+
+from random import randint
+randiant(0, 100) => returns some random integer
+```
+
+`input`
+```python
+result = input('what is your number?')
+type(result) => str
+```
+### List Comprehension
+```python
+mylist = [num**2 for num in range(0,11) if x%2==0]
+
+celcius = [0,10,20,34.5]
+fahrenheit = [((9/5)*temp+32) for temp in celcius]
+
+mylist = [x*y for x in [2,4,6] for y i [1,10,1000]]
+```
+
+
+
 
