@@ -69,7 +69,7 @@ print('My name is {}'.format(name))
 print(f'My name is {name}')
 
 print('{0:8} | {1:9}'.format('Fruit', 'Quantity'))
-print('{0:8} | {1:9}'.format('Apples', 3.))
+print('{0:8} | {1:9}'.format('Apples', 3))
 print('{0:8} | {1:9}'.format('Oranges', 10))
 # Fruit    | Quantity 
 # Apples   |       3.0
@@ -93,6 +93,11 @@ type(sorted_list) => NoneType
 new_list.sort()
 sorted_list = new_list
 new_list.reverse()
+' '.join(new_list)
+
+help(mylist.insert) => # you can find the documentations
+
+
 ```
 ### Dictionary
 ```python
@@ -120,8 +125,8 @@ myset = set()
 myset.add(1) => {1}
 mylist =  [1,1,1,1,2,2,3,3,3,3]
 set(mylist) => {1,2,3}
-
 ```
+The ordering operators (<, <=, >, >=) comoare two sets to determine their superset or subset relationship. These operators reflect the two definitions of subset (and superset). 
 
 ### Booleans
 returns True or False. In python you need to capitalize T and F.
@@ -264,5 +269,98 @@ mylist = [x*y for x in [2,4,6] for y i [1,10,1000]]
 ```
 
 
+### functions 
+```python
+def name_of_function(name):
+  #code here
+```
+
+### *args and **kwargs
+`*args`
+When a function parameter starts with an asterisk, it allows for an arbitrary number of arguments, and the function takes them in as a tuple of values. 
+
+`**kwargs`
+handle arbitrary numbers of keyworded arguments. Instead of creating a tuple of values, `**kwargs` builds a dictionary of key/value pairs.
+
+Useful when you start to use outside libraries
+
+```python
+def myfunc(*args):
+    return sunm(args) * 0.05
+
+def myfunc(**kwargs):
+    print(kwargs) #returns the dictionary
+```
 
 
+### Excercises
+
+```python
+def summer_69(arr):
+    total = 0
+    add = True
+    
+    for num in arr:
+        while add:
+            if num!=6:
+                total += num
+                break
+            else:
+                add = False
+        while not add:
+            if num != 9:
+                break
+            else:
+                add = True
+                break
+                
+    return total
+
+
+def count_primes(num):
+    if num < 2:
+        return 0
+    primes = [2]
+    
+    x = 3
+    
+    while x <= num:
+        for y in range(3,x,2):
+            if x%y == 0:
+                x += 2
+                break
+        else:
+            primes.append(x)
+            x += 2
+
+    return len(primes)
+```
+
+### Lambda Expressions Map and Filter
+
+```python
+map(myfunc, mylist)
+filter(myboolean, mylist)
+
+def square(num): return num ** 2
+lambda num: num**2
+map(lambda num: num **2, mylist)
+filter(lambda n: n%2 == 0, mylist)
+lambda s: s[0]
+lambda x,y: x+y
+```
+
+### Nested Statement and Scope
+When you create a variable name in Python the name is stored in a `name-space`. Variable names also have a scope, the scope determines the visibility of that variable name to other parts of your code.
+
+```python
+x = 25
+def printer():
+    x = 50
+    return x
+
+print(x) => 25
+print(printer()) => 50
+```
+
+local => enclosing functions => global => python built-in
