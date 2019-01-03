@@ -151,11 +151,70 @@ We can inherit from Error and other built-in error classes normally, just need t
 `load` – the browser loaded all resources (images, styles etc).
 
 - Discuss the differences between `let`, `const`, and `var`. What are their respective scopings?
+
+An undeclared variable — assignment without var, let or const — creates a var variable in global scope.
+
+let and const are new. They are not hoisted and block-scoped alternatives for variable declaration. This means that a pair of curly braces define a scope in which variables declared with either let or const are confined in. 
+```javascript
+let g1 = 'global 1'
+let g2 = 'global 2'
+{
+  g1 = 'new global 1'
+  let g2 = 'local global 2'
+  console.log(g1) //'new global 1'
+  console.log(g2) //'local global 2'
+}
+
+console.log(g1) // 'new glocal 1'
+console.log(g2) // 'global 2'
+```
+
+`const` cannot be reassigned, but its property can be changed!
+
 - What happens when you enable strict mode in javascript?
+
+JavaScript is executed in strict mode by using the “use strict” directive. Strict mode tightens the rules for parsing and error handling on your code.
+
+
 - How does the rest/spread operator work in JS?
+
+
 - What problem does `bind` solve in Javascript? How does it accomplish this?
+
+.bind() returns a new function, with a certain context and parameters. It is usually used when you want a function to be called later with a certain context.  This is useful for asynchronous callbacks and events.
+
+.bind() works like the call function. It requires you to pass in the arguments one by one separated by a comma.
+
+
+
 - What is the syntax for passing arguments to the `bind` function?
 - Does JS assign variables by value or by reference?
 - What are the 7 different JS types? 
+
+
 - Explain the difference between + and -*/ in JS when it comes to coercion.
+
+`+` operator is a tricky operator because it works for both number addition and string concatenation.
+
+But, the `*`, `/` , and `-` operators are exclusive for numeric operations. When these operators are used with a string, it forces the string to be coerced to a number.
+
+
 - How does prototypal inheritance work?
+
+- Function calls: call, apply and bind
+
+All of these three methods are used to attach this into function and the difference is in the function invocation.
+
+- What does the `length` attribute refer to on a Function in Javascript?
+
+In JavaScript, functions are objects.
+
+built-in property “length” that returns the number of function parameters. rest parameters are not counted.
+
+- Explain the differences between a Function Expression and Function Declaration
+
+A Function Expression is created when the execution reaches it and is usable from then on — it is not hoisted.
+
+A Function Declaration can be called both before and after it was defined — it is hoisted.
+
+- How does JavaScript handle values and references? 
