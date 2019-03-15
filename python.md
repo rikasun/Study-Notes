@@ -12,7 +12,7 @@ type(a)
 # determine variable a type 
 ```
 ### Numbers
-```python
+```python  
 # Division 
 3/2 => 1.5
 # Floor Division 
